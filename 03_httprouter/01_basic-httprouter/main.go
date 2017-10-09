@@ -1,5 +1,5 @@
 // execService.go
-package main
+package _1_basic_httprouter
 
 import (
 	"bytes"
@@ -28,6 +28,8 @@ func getCommandOutput(command string, arguments ...string) string {
 	return out.String()
 }
 
+
+//Run the go exe with the arg "version" then push response into browsers
 func goVersion(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
 	fmt.Fprintf(w, getCommandOutput("C:/Go/bin/go.exe",
 		"version"))
