@@ -19,7 +19,7 @@ func main() {
 		if urlPathElements[1] == "roman_number" {
 			number, _ :=
 				strconv.Atoi(strings.TrimSpace(urlPathElements[2]))
-			if number == 0 || number > 10 {
+			if number == 0 || number > 20 {
 				//if resource is higher than 10 ( highest in data set )
 				w.WriteHeader(http.StatusNotFound)
 				w.Write([]byte("404 - Roman Numeral Not Found"))
